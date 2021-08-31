@@ -3,9 +3,9 @@ formula=$1
 version=$2
 sha=$3
 formula_path="Formula/$formula.rb"
-sed -i.bak 's/$formula-v$version_pattern/$formula-v$version/g' $formula_path
-sed -i.bak 's/version .*/version $version/' $formula_path
-sed -i.bak 's/sha256 .*/sha256 $sha/' $formula_path
+sed -i.bak "s/$formula-v$version_pattern/$formula-v$version/g" $formula_path
+sed -i.bak "s/version .*/version $version/" $formula_path
+sed -i.bak "s/sha256 .*/sha256 $sha/" $formula_path
 git config --global user.email "lakshmiravali.rimmalapudi@gmail.com"
 git config --global user.name "lakshmiravali"
 branch=$(git branch --show-current)
